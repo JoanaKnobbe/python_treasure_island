@@ -30,8 +30,8 @@ print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.") 
 
 print("You're at a crossroad. Where do you want to go?")
-direction = input("Type 'left' or 'right': ")
-if direction == "left" or direction == "LEFT" or direction == "Left":
+direction = input("Type 'left' or 'right': ").lower()
+if direction == "left":
   print("\nYou've come to a beautiful beach. \nThere is an island a little bit far at the sea.")
   print('''
   ************************************************************
@@ -56,11 +56,11 @@ if direction == "left" or direction == "LEFT" or direction == "Left":
        ~                  ~    ~ ~                 ~
   ************************************************************
   ''')
-  wait_or_swim = input("Type 'wait' to wait for a boat. Type 'swim' to swim across: ")
-  if wait_or_swim == "wait" or wait_or_swim == "Wait" or wait_or_swim == "WAIT":
+  wait_or_swim = input("Type 'wait' to wait for a boat. Type 'swim' to swim across: ").lower()
+  if wait_or_swim == "wait":
     print("\nYou arrive at the island unharmed. \nThere is a hidden shelter and the password to the entrance has 3 color buttons. \nOne red, one yellow and one blue.")
-    color = input("Which color do you choose? ")
-    if color == "red" or color == "Red" or color == "RED":
+    color = input("Which color do you choose? ").lower()
+    if color == "red":
       print("\nRed....\nis....\nthe....\ncolor...\nof...\nfire!!!!!!!!\nYou are burned by fire. \nGame Over.")
       print('''
 
@@ -75,7 +75,7 @@ if direction == "left" or direction == "LEFT" or direction == "Left":
            (_,) . ), ) _) _,')  (, ) '. )  ,. (' )
       ***************************************************
       ''')
-    elif color == "blue" or color == "Blue" or color == "BLUE":
+    elif color == "blue":
       print("\nOh no! \nYou've invoked the treasure keeper!!! \nAn aaaaaaaaaaaangry Dragon!\nDo I need to tell you what happens next?\nGame Over.")
       print('''
 
@@ -107,7 +107,7 @@ if direction == "left" or direction == "LEFT" or direction == "Left":
 
 
       ''')
-    elif color == "yellow" or color == "Yellow" or color == "YELLOW":
+    elif color == "yellow":
       print("\nYEEEEEES!!!!!\nYou found the treasure! \n\n")
       print('''
                                      --||[You Win!]||--
